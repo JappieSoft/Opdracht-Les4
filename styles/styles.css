@@ -37,19 +37,36 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'merriweather', serif;
-    color: var(--color-night);
+    text-align: center;
 }
 
-p {
+p, a {
    font-family: 'roboto', sans-serif;
-    color: var(--color-night);
+    font-weight: normal;
+    text-decoration-line: none ;
 }
 
-
+h1{
+    font-size: 2em;
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Re-usable ----------------------- */
+.outer-container{
+    display: flex;
+    justify-content: center;
+    border: greenyellow dashed 2px;
+}
+
+.inner-container{
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 16px;
+    border: orangered dashed 2px;
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
@@ -58,35 +75,205 @@ p {
 /* --------------- 4.1 Header ------------------------- */
 
 header{
+    background-image: linear-gradient(135deg, var(--color-majorelleblue) 60%, var(--color-chryslerblue));
+}
+
+.navbar {
     display: flex;
-    flex-direction: column;
-    background-color: var(--color-majorelleblue);
+    width: 100%;
+    justify-content: flex-end;
+    padding: 1rem 2rem 1rem 0;
 }
 
 .navbar ul{
+
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
+    gap:    3em;
     align-items: center;
-    border: #0C0C0C dashed 2px;
 }
 
 .navbar li{
-    display: flex;
-    border: green dashed 2px;
+   display: flex;
 }
 
 .headersection{
     display: flex;
     flex-direction: column;
-    border: pink dashed 2px;
+    padding: 5rem 0 10rem 0;
+    gap: 2em;
+    align-items: center;
+    position: relative;
+
+}
+header h1, p, a{
+    color: var(--color-magnolia);
 }
 
-#letswork-button {
-    display: flex;
-    background-color: var(--color-frenchrose);
 
+#header-button:link, #header-button:visited {
+    background-color: var(--color-frenchrose);
+    color: white;
+    height: 3em;
+    padding: 14px 35px;
+    border-radius: 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 1px 3px 20px var(--color-chryslerblue);
+    font-variant-caps: all-small-caps;
+}
+
+#header-button:hover, #header-button:active {
+    background-color: var(--color-frenchrose);
+}
+
+
+
+.header-squiggle {
+    position: absolute;
+    bottom: 0;
+    left: auto;
+}
+
+header img{
+    width: 50px;
 }
 
 /* --------------- 4.2 Introduction ------------------- */
+
+.introduction {
+    display: flex;
+    color: var(--color-chryslerblue);
+    gap: 2em;
+    padding: 3em 0;
+}
+.introduction a{
+    color: var(--color-chryslerblue);
+}
+.introduction p{
+    color: var(--color-night);
+}
+.introduction-question{
+    text-align: center;
+}
+
+/* --------------- 4.3 Case Studies ------------------- */
+
+.work-examples {
+    display: flex;
+    background-color: var(--color-lightgray);
+    gap: 4em;
+    padding: 4em 3em 7em 3em;
+}
+
+.work-examples p{
+    color: var(--color-night);
+}
+
+.work-examples a{
+    color: var(--color-chryslerblue);
+}
+
+.case-studies {
+    display: flex;
+    justify-content: space-between;
+}
+
+.case-studies-text-wrapper {
+    display: flex;
+    flex-basis: 600px;
+}
+
+.case-studies-img {
+    display: flex;
+    flex-basis: 800px;
+    align-items: center;
+    justify-content: center;
+}
+
+.case-studies-img img{
+    width: 100%;
+    box-shadow: 0 10px 15px var(--color-normalgray);
+}
+
+.rolling-stone-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    gap: 1.5em;
+    align-items: flex-start;
+    padding-right: 10em;
+}
+
+.variety-studies-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    gap: 1.5em;
+    align-items: flex-start;
+    padding-left: 10em;
+}
+
+.worth-studies-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    gap: 1.5em;
+    align-items: flex-start;
+    padding-right: 10em;
+}
+
+/* --------------- 4.4 Services ------------------- */
+.work-example-grid{
+    display: grid;
+    grid-auto-columns: 900px;
+    flex-wrap: wrap;
+
+}
+
+.work-example-wrapper{
+    display: flex;
+    gap: 2em;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.work-example-article{
+    text-align: left;
+    flex-basis: 250px;
+    row-gap: 1em;
+    border: var(--color-chryslerblue) solid 1px;
+}
+
+.work-example-article img {
+    max-width: 50px;
+    margin: 1em 0;
+}
+
+.work-example-article h3 {
+    color: var(--color-chryslerblue);
+    text-align: left;
+}
+
+.work-example-article p {
+    color: var(--color-normalgray);
+    text-align: left;
+    font-size: 0.8em;
+    margin: 1em 1em;
+}
+
+/* --------------- 4.5 Footer ------------------- */
+
+
+/* --------------- 4.51 Form -------------------- */
+
+
+/* --------------- 4.52 Bottom Footer ------------------- */
+
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
