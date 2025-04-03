@@ -5,6 +5,7 @@
 <head>
     <title>Rekupe Web Designs</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
@@ -19,7 +20,7 @@
             </ul>
         </nav>
 
-        <section class="headersection">
+        <section class="header-section">
             <h1>Your website is an investment in the success of your business.</h1>
             <p>We are here to help you succeed.</p>
             <a href="#contact-form" id="header-button">Let's work together</a>
@@ -34,14 +35,14 @@
             <h3>Rekupe is a digital agency in Los Angeles.</h3>
             <h3>We use strategic UX, SEO optimization and beautiful visual designs to help your business grow.</h3>
             <h3>We see every project as a fresh opportunity, pushing ourselves to create new digital experiences.</h3>
-           <p>Have a question? <a href="#contact-form">Click here</a> to contact us!</p>
+            <p>Have a question? <a href="#contact-form">Click here</a> to contact us!</p>
         </div>
     </section>
-    <section class="outer-container">
+    <section class="outer-container work-container">
         <div class="inner-container work-examples">
             <div class="case-studies">
                 <div class="case-studies-text-wrapper" id="rolling-case">
-                    <div class="rolling-stone-text">
+                    <div class="case-studies-text">
                         <h2>Rolling Stone</h2>
                         <span><img src="./assets/squiggle_line.svg" alt="pink squiggly line"/> </span>
                         <p>You know Rolling Stone. It's the definitive voice in music, politics and culture. It's a
@@ -51,14 +52,11 @@
                 </div>
                 <span class="case-studies-img">
                     <img src="./assets/work-image-01.jpeg" alt="RollingStone on laptop"/>
-                    </span>
+                </span>
             </div>
             <div class="case-studies">
-                    <span class="case-studies-img">
-                    <img src="./assets/work-image-02.jpeg" alt="Variety magazine image next to laptop"/>
-                    </span>
                 <div class="case-studies-text-wrapper">
-                    <div class="variety-studies-text">
+                    <div class="case-studies-text">
                         <h2>Variety</h2>
                         <span><img src="./assets/squiggle_line.svg" alt="pink squiggly line"/> </span>
                         <p>Variety is an industry leader for breaking entertainment news, reviews and box office results
@@ -66,10 +64,13 @@
                         <a href="/">View Project</a>
                     </div>
                 </div>
+                <span class="case-studies-img">
+                    <img src="./assets/work-image-02.jpeg" alt="Variety magazine image next to laptop"/>
+                </span>
             </div>
             <div class="case-studies">
                 <div class="case-studies-text-wrapper">
-                    <div class="worth-studies-text">
+                    <div class="case-studies-text">
                         <h2>Worth</h2>
                         <span><img src="./assets/squiggle_line.svg" alt="pink squiggly line"/></span>
                         <p>A global media platform connecting a community that embraces worth beyond wealth.</p>
@@ -142,30 +143,31 @@
                 <p>Have a question? Need a quote? Let us know!</p>
             </div>
             <form>
-                        <p>
-                            <label for="name">Name</label>
-                        </p>
-                        <p>
-                            <input type="text" name="name" id="name" placeholder="Name" required/>
-                        </p>
-                        <p>
-                            <label for="email">Email</label>
-                        </p>
-                        <p>
-                            <input type="email" name="email" id="email" placeholder="Email" required/>
-                        </p>
-                        <p>
-                            <label for="message">Message</label>
-                        </p>
-                        <p>
-                            <textarea placeholder="Message" id="message" name="message" rows="8" cols="75" spellcheck="true"></textarea>
-                        </p>
-                        <input type="submit" id="submit" value="send"/>
+                <p>
+                    <label for="name">Name</label>
+                </p>
+                <p>
+                    <input type="text" name="name" id="name" placeholder="Name" required/>
+                </p>
+                <p>
+                    <label for="email">Email</label>
+                </p>
+                <p>
+                    <input type="email" name="email" id="email" placeholder="Email" required/>
+                </p>
+                <p>
+                    <label for="message">Message</label>
+                </p>
+                <p>
+                    <textarea placeholder="Message" id="message" name="message" rows="8" cols="75"
+                              spellcheck="true"></textarea>
+                </p>
+                <input type="submit" id="submit" value="send"/>
             </form>
         </div>
     </section>
     <section class="outer-container copyright-container">
-            <p>Business website opdracht © NOVI Hogeschool 2022</p>
+        <p>Business website opdracht © NOVI Hogeschool 2022</p>
     </section>
 </footer>
 </body>
