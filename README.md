@@ -233,7 +233,7 @@ De screenshots zijn groot. Download de screenshots om ze te bekijken:
 ```css
 /*////////////////////////
     Table of Contents
-    1. Global Styles
+    1. Global styles
     2. Typography
     3. Layout
         3.1 Reusables
@@ -245,7 +245,7 @@ De screenshots zijn groot. Download de screenshots om ze te bekijken:
     5. Media Queries
 ////////////////////////*/
 
-/* ------------------------------- 1. Global Styles -------------------------------- */
+/* ------------------------------- 1. Global styles -------------------------------- */
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 

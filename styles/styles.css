@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*////////////////////////
+    Table of Contents
+    1. Global styles
+    2. Typography
+    3. Layout
+        3.1 Re-usable
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global styles -------------------------------- */
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-chryslerblue: #5722CD;
+    --color-majorelleblue: #4B49E8;
+    --color-frenchrose: #ED4385;
+    --color-night: #0C0C0C; /* normal text */
+    --color-magnolia: #F2F0FF; /* floating words */
+    --color-lightgray: #F3F6F9; /* background projects */
+    --color-normalgray: #7A7A7A; /* service tile's */
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'merriweather', serif;
+    text-align: center;
+}
+
+p, a {
+    font-family: 'roboto', sans-serif;
+    font-weight: normal;
+    text-decoration-line: none;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Re-usable ----------------------- */
+.outer-container {
+    display: flex;
+    justify-content: center;
+}
+
+.inner-container {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 16px;
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+
+header {
+    background-image: linear-gradient(135deg, var(--color-majorelleblue) 60%, var(--color-chryslerblue));
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 1rem 2rem 1rem 0;
+}
+
+.navbar ul {
+
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    align-items: center;
+}
+
+.navbar li {
+    display: flex;
+}
+
+.header-section {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 0 10rem 0;
+    gap: 2em;
+    align-items: center;
+    position: relative;
+
+}
+
+header h1, p, a {
+    color: var(--color-magnolia);
+}
+
+
+#header-button:link, #header-button:visited {
+    background-color: var(--color-frenchrose);
+    color: white;
+    height: 3em;
+    padding: 14px 35px;
+    border-radius: 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 1px 3px 20px var(--color-chryslerblue);
+    font-variant-caps: all-small-caps;
+}
+
+#header-button:hover, #header-button:active {
+    background-color: var(--color-frenchrose);
+}
+
+
+.header-squiggle {
+    position: absolute;
+    bottom: 0;
+    left: auto;
+}
+
+header img {
+    width: 50px;
+}
+
+/* --------------- 4.2 Introduction ------------------- */
+
+.introduction {
+    display: flex;
+    color: var(--color-chryslerblue);
+    gap: 2em;
+    padding: 3em 0;
+}
+
+.introduction a {
+    color: var(--color-chryslerblue);
+}
+
+.introduction p {
+    color: var(--color-night);
+}
+
+/* --------------- 4.3 Case Studies ------------------- */
+
+.work-container {
+    background-color: var(--color-lightgray);
+}
+
+.work-examples {
+    display: flex;
+    gap: 4em;
+    padding: 4em 3em 7em 3em;
+}
+
+.work-examples p {
+    color: var(--color-night);
+}
+
+.work-examples a {
+    color: var(--color-chryslerblue);
+}
+
+.case-studies {
+    display: flex;
+}
+
+.case-studies:nth-child(odd){
+    flex-direction: row; /*ik weet dat dit dubbel is maar dit is voor mn eigen overzicht*/
+}
+
+.case-studies:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.case-studies-text-wrapper {
+    display: flex;
+    flex-basis: 600px;
+}
+
+.case-studies-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: start;
+    gap: 1.5em;
+}
+
+.case-studies:nth-child(odd) .case-studies-text{
+    padding: 0 10em 0 3em;
+}
+
+.case-studies:nth-child(even) .case-studies-text{
+    padding: 0 3em 0 10em;
+}
+
+.case-studies-img img {
+    width: 100%;
+    box-shadow: 0 10px 15px var(--color-normalgray);
+}
+
+.case-studies-img {
+    display: flex;
+    flex-basis: 800px;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+
+/* --------------- 4.4 Services ------------------- */
+.work-example-wrapper {
+    display: flex;
+    gap: 2em;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5rem 0;
+}
+
+.work-example-article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    row-gap: 1em;
+    padding: 1.5em;
+    border: var(--color-chryslerblue) solid 1px;
+    box-shadow: 0 10px 15px var(--color-normalgray);
+}
+
+.work-example-article img {
+    max-width: 50px;
+}
+
+.work-example-article h3 {
+    color: var(--color-chryslerblue);
+}
+
+.work-example-article p {
+    color: var(--color-normalgray);
+    font-size: 0.8em;
+}
+
+/* --------------- 4.5 Footer ------------------- */
+.form-container {
+    background-image: linear-gradient(135deg, var(--color-majorelleblue) 60%, var(--color-chryslerblue));
+    width: 100%;
+    padding: 3em;
+    color: var(--color-magnolia);
+}
+
+/* --------------- 4.51 Form -------------------- */
+
+.footer-container form {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.form-header h2 {
+    margin-bottom: 2rem;
+}
+
+.form-header p {
+    margin-bottom: 2rem;
+    align-self: flex-start;
+}
+
+.footer-container form:placeholder-shown {
+    color: var(--color-lightgray);
+}
+
+.footer-container input, textarea {
+    width: 100%;
+    min-height: 3rem;
+    padding: 10px;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--color-normalgray);
+    font-family: 'roboto', sans-serif;
+    font-weight: 500;
+}
+
+#submit {
+    align-self: center;
+    background-color: var(--color-frenchrose);
+    color: white;
+    padding: 14px 35px;
+    border-radius: 2em;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 1px 5px 20px var(--color-chryslerblue);
+    font-variant-caps: all-small-caps;
+    width: 150px;
+    cursor: pointer;
+    border-width: 0;
+}
+
+
+/* --------------- 4.52 Bottom Footer ------------------- */
+.copyright-container {
+    background-color: var(--color-night);
+    color: var(--color-magnolia);
+    font-size: 0.8em;
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 576px)  {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.0rem;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .inner-container{
+        margin: 0;
+    }
+
+    .navbar{
+        justify-content: space-evenly;
+        padding: 1rem 0 0 0;
+    }
+
+    .work-examples {
+        padding: 2.5rem 1rem 2.5rem 1rem ;
+        gap: 0;
+    }
+
+    .case-studies {
+        padding: 0;
+    }
+
+    .case-studies:nth-child(odd){
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .case-studies:nth-child(even){
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .case-studies-text-wrapper {
+        flex-basis: auto;
+    }
+
+    .case-studies-text{
+        gap: 0.5em;
+    }
+
+
+    .case-studies:nth-child(odd) .case-studies-text{
+        padding: 1rem 0 1rem 0;
+    }
+
+    .case-studies:nth-child(even) .case-studies-text{
+        padding: 1rem 0 1rem 0;
+    }
+
+    .case-studies-img {
+        flex-basis: auto;
+    }
+
+    .form-container {
+        padding: 2.5rem 1rem 2.5rem 1rem ;
+    }
+}
+
+
+@media screen and (min-width: 577px) and (max-width: 888px){
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .inner-container{
+        margin: 0;
+    }
+
+    .navbar{
+        justify-content: space-evenly;
+        padding: 1rem 0 0 0;
+    }
+    .navbar ul{
+        gap: 6em;
+    }
+
+    .work-examples {
+        padding: 2.5rem 1rem 2.5rem 1rem ;
+        gap: 0;
+    }
+
+    .case-studies {
+        padding: 0;
+    }
+
+    .case-studies:nth-child(odd){
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .case-studies:nth-child(even){
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .case-studies-text-wrapper {
+        flex-basis: auto;
+        padding: 3rem 0;
+    }
+
+    .case-studies-text{
+        gap: 1.5em;
+    }
+
+
+    .case-studies:nth-child(odd) .case-studies-text{
+        padding: 1rem 0 1rem 0;
+    }
+
+    .case-studies:nth-child(even) .case-studies-text{
+        padding: 1rem 0 1rem 0;
+    }
+
+    .case-studies-img {
+        flex-basis: auto;
+    }
+
+    .form-container {
+        padding: 2.5rem 1rem 2.5rem 1rem ;
+    }
+}
+
