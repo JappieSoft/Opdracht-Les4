@@ -154,9 +154,6 @@ header img{
 .introduction p{
     color: var(--color-night);
 }
-.introduction-question{
-    text-align: center;
-}
 
 /* --------------- 4.3 Case Studies ------------------- */
 
@@ -268,13 +265,57 @@ header img{
     background-image: linear-gradient(135deg, var(--color-majorelleblue) 60%, var(--color-chryslerblue));
     width: 100%;
     padding: 3em;
+    color: var(--color-magnolia);
 }
 /* --------------- 4.51 Form -------------------- */
-.form-container fieldset {
+
+.footer-container form{
+    display: flex;
+    flex-direction: column;
     border: none;
 }
 
+.form-header h2{
+    margin-bottom: 2rem;
+}
 
+.form-header p {
+    margin-bottom: 2rem;
+    align-self: flex-start;
+}
+
+.footer-container form:placeholder-shown{
+    color: var(--color-lightgray);
+}
+
+.footer-container input, textarea {
+    width: 100%;
+    min-height: 3rem;
+    padding: 10px;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--color-normalgray);
+    font-family: 'roboto', sans-serif;
+    font-weight: 500;
+}
+
+#submit{
+    align-self: center;
+    background-color: var(--color-frenchrose);
+    color: white;
+    padding: 14px 35px;
+    border-radius: 2em;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 1px 3px 20px var(--color-chryslerblue);
+    font-variant-caps: all-small-caps;
+    width: 150px;
+    border: black dashed 2px;
+}
 
 
 
