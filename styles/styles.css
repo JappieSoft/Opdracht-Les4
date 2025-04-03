@@ -405,10 +405,7 @@ input::placeholder, textarea::placeholder {
 }
 
 
-
-
-
-@media screen and (max-width: 888px){
+@media screen and (min-width: 577px) and (max-width: 888px){
 
     h1 {
         font-size: 3rem;
